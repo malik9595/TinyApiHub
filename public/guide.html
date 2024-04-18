@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>TinyApiHub</title>
+		<link rel="stylesheet" href="style.css" />
+		<script src="https://cdn.tailwindcss.com"></script>
+	</head>
+	<body class="max-w-3xl m-auto h-screen text-xl">
+		<!-- Navbar Start -->
+		<nav class="flex justify-between py-4">
+			<div class="text-black-950 font-sans font-semibold text-lg">
+				<a href="/">TinyApiHub</a>
+			</div>
+			<div class="">
+				<span class="px-3 "><a href="/">Home</a></span>
+				<span class="px-3 "><a href="/guide">Guide</a></span>
+				<span class="px-3"><a href="tel:+919863546801">Contact</a></span>
+			</div>
+		</nav>
+		<!-- Navbar End -->
+
+		<main class="h-1/2 flex-col justify-center content-center">
+			<h1 class="text-5xl py-5">Guide</h1>
+			<p>
+				Below you'll find examples using Fetch API but you can TinyApiHub with
+				any other language.
+			
+				You can copy paste the code in your browser console to quickly test
+				TinyApiHub.
+			</p>
+		</main>
+
+		<!-- GETTING RESOURCES START -->
+		<section class="mt-20">
+			<h1 class="text-3xl py-5">Getting a resource</h1>
+			<div class="shadow-md p-5 my-3">
+				<span class="text-sky-600">fetch </span>
+				(<span style="color: gold">'https://tinyapihub.com/users/1' </span
+				>)<br />
+				<span class="text-sky-600">.then</span> (response =>response.
+				<span class="text-sky-600">json</span>())
+				<br />
+				<span class="text-sky-600">.then</span> (json => console.
+				<span class="text-sky-600">log</span>(json))
+			</div>
+			<span class="mt-3 mb-13">👇 Output</span>
+			<div class="shadow-md p-5 my-3">
+				{ <br />
+				<span class="text-red-500">&nbsp; _id</span>: 6614fcabf15055607c4d38bd,
+				<br />
+				<span class="text-red-500">&nbsp; name</span>: '...', <br />
+				<span class="text-red-500">&nbsp; email</span>: '...', <br />
+				&nbsp; &nbsp; /* ... */ <br />&nbsp;
+				<span class="text-red-500"> add</span>: '...', <br />
+				}
+			</div>
+		</section>
+
+		<!-- GETTING RESOURCES END -->
+
+		<!-- GETTING  ALL RESOURCES START -->
+
+		<section class="mt-20">
+			<h1 class="text-3xl py-5">Listing all resources</h1>
+			<div class="shadow-md p-5 my-3">
+				<span class="text-sky-600">fetch </span>
+				(<span style="color: gold">'https://tinyapihub.com/users' </span>)<br />
+				<span class="text-sky-600">.then</span> (response =>response.
+				<span class="text-sky-600">json</span>())
+				<br />
+				<span class="text-sky-600">.then</span> (json => console.
+				<span class="text-sky-600">log</span>(json))
+			</div>
+			<span>👇 Output</span>
+			<div class="shadow-md p-5 my-3">
+				[ <br />&nbsp; { <span class="text-red-500">id</span>: 1,
+				<span class="text-red-500">name</span>: '...' /* ... */ }, <br />&nbsp;
+				{ <span class="text-red-500">id</span>: 2,
+				<span class="text-red-500">name</span>: '...' /* ... */ }, <br />&nbsp;
+				{ <span class="text-red-500">id</span>: 3,
+				<span class="text-red-500">name</span>: '...' /* ... */ },<br />&nbsp;&nbsp;
+				/* ... */ <br />&nbsp; { <span class="text-red-500">id</span> 50,
+				<span class="text-red-500">name</span>: '...' /* ... */ }, <br />
+				];
+			</div>
+		</section>
+
+		<!-- GETTING  ALL RESOURCES END -->
+
+		<!-- CREATING USERS START -->
+		<section class="mt-20">
+			<h1 class="text-3xl py-5">Creating a resource</h1>
+			<div class="shadow-md p-5 my-3">
+				<span class="text-sky-600">fetch</span>(<span style="color: gold"
+					>'https://tinyapihub.com/todolist'</span
+				>, { <br />
+				&nbsp;&nbsp;<span class="text-red-500">method</span>:<span
+					style="color: gold"
+					>'POST'</span
+				>
+				, <br />
+				&nbsp;&nbsp;<span class="text-red-500">body: JSON</span> .<span
+					class="text-sky-600"
+					>stringify</span
+				>({<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-red-500">task</span> :
+				<span style="color: gold">'Buy groceries'</span>,
+				<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-red-500">completed</span> :
+				<span style="color: blue">false</span>,<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-red-500">time</span> :
+				<span style="color: gold">'4:00 PM'</span>,
+				<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-red-500">id</span> : 1,<br />
+				&nbsp;&nbsp; }),<br />
+				&nbsp;&nbsp;<span class="text-red-500">headers</span>: {<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;
+				<span class="text-red-500">'Content-type'</span>:
+				<span style="color: gold">'application/json; charset=UTF-8'</span
+				>,<br />
+				&nbsp;&nbsp;},<br />
+				})<br />
+				&nbsp;&nbsp;.<span class="text-sky-600">then</span>((response) =>
+				response.<span class="text-sky-600">json</span>()) <br />
+				&nbsp;&nbsp;.<span class="text-sky-600">then</span>((json) =>
+				console.<span class="text-sky-600">log</span>(json)); <br />
+			</div>
+			<span>👇 Output</span>
+			<div class="shadow-md p-5 my-3">
+				{ <br />
+
+				&nbsp;<span class="text-red-500">_id</span>: 6614fcdbf15055607c4d3948
+				<br />
+				&nbsp;<span class="text-red-500">id</span>: 1 <br />
+				&nbsp;<span class="text-red-500">task</span>: Buy groceries <br />
+				&nbsp;<span class="text-red-500">completed</span>: false <br />
+				&nbsp;<span class="text-red-500">time</span>: 4:00 PM<br />
+
+				}
+			</div>
+			<p>
+				<strong>Important</strong>: resource will not be really updated on the
+				server but it will be faked as if.
+			</p>
+		</section>
+		<!-- CREATING USERS END -->
+
+		<!--  UPDATING RESOURCES START -->
+		<section class="mt-20">
+			<h1 class="text-3xl py-5">Updating a resource</h1>
+			<div class="shadow-md p-5 my-3">
+				<span class="text-sky-600">fetch</span>(<span style="color: gold"
+					>'https://tinyapihub.com/posts?id=1'</span
+				>, { <br />
+				&nbsp;&nbsp;<span class="text-red-500">method</span>:<span
+					style="color: gold"
+					>'PUT'</span
+				>
+				, <br />
+				&nbsp;&nbsp;<span class="text-red-500">body: JSON</span> .<span
+					class="text-sky-600"
+					>stringify</span
+				>({<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-red-500">username</span> :
+				<span style="color: gold">'wildlife_watcher'</span>,
+				<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-red-500">title</span> :
+				<span style="color: gold">'Rare Sangai Deer'</span>,
+				<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-red-500">body</span> :
+				<span style="color: gold">'Witnessing the graceful Sangai deer'</span
+				>,<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-red-500">userId</span> : 1,<br />
+				&nbsp;&nbsp; }),<br />
+				&nbsp;&nbsp;<span class="text-red-500">headers</span>: {<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;
+				<span class="text-red-500">'Content-type'</span>:
+				<span style="color: gold">'application/json; charset=UTF-8'</span
+				>,<br />
+				&nbsp;&nbsp;},<br />
+				})<br />
+				&nbsp;&nbsp;.<span class="text-sky-600">then</span>((response) =>
+				response.<span class="text-sky-600">json</span>()) <br />
+				&nbsp;&nbsp;.<span class="text-sky-600">then</span>((json) =>
+				console.<span class="text-sky-600">log</span>(json)); <br />
+			</div>
+			<span>👇 Output</span>
+			<div class="shadow-md p-5 my-3">
+				{ <br />
+
+				&nbsp;<span class="text-red-500">_id</span>: 6614fcd8f15055607c4d3920
+				<br />
+				&nbsp;<span class="text-red-500">id</span>: 1 <br />
+				&nbsp;<span class="text-red-500">username</span>: wildlife_watcher
+				<br />
+				&nbsp;<span class="text-red-500">title</span>: Rare Sangai Deer <br />
+				&nbsp;<span class="text-red-500">body</span>: Witnessing the graceful
+				Sangai deer <br />
+
+				}
+			</div>
+			<p>
+				<strong>Important</strong>: resource will not be really updated on the
+				server but it will be faked as if.
+			</p>
+		</section>
+		<!-- UPDATING RESOURCES END -->
+
+		<!-- PATCHING RESOURCES START -->
+		<section class="mt-20">
+			<h1 class="text-3xl py-5">Patching a resource</h1>
+			<div class="shadow-md p-5 my-3">
+				<span class="text-sky-600">fetch</span>(<span style="color: gold"
+					>'https://tinyapihub.com/todolist?id=3'</span
+				>, { <br />
+				&nbsp;&nbsp;<span class="text-red-500">method</span>:<span
+					style="color: gold"
+					>'PATCH'</span
+				>
+				, <br />
+				&nbsp;&nbsp;<span class="text-red-500">body: JSON</span> .<span
+					class="text-sky-600"
+					>stringify</span
+				>({<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-red-500">task</span> :
+				<span style="color: gold">'Update resume'</span>,
+				<br />
+				&nbsp;&nbsp;<span class="text-red-500">headers</span>: {<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;
+				<span class="text-red-500">'Content-type'</span>:
+				<span style="color: gold">'application/json; charset=UTF-8'</span
+				>,<br />
+				&nbsp;&nbsp;},<br />
+				})<br />
+				&nbsp;&nbsp;.<span class="text-sky-600">then</span>((response) =>
+				response.<span class="text-sky-600">json</span>()) <br />
+				&nbsp;&nbsp;.<span class="text-sky-600">then</span>((json) =>
+				console.<span class="text-sky-600">log</span>(json)); <br />
+			</div>
+			<span>👇 Output</span>
+			<div class="shadow-md p-5 my-3">
+				{ <br />
+
+				&nbsp;<span class="text-red-500">_id</span>: 6614fcdbf15055607c4d3957
+				<br />
+				&nbsp;<span class="text-red-500">id</span>: 3 <br />
+				&nbsp;<span class="text-red-500">task</span>: update resume <br />
+				&nbsp;<span class="text-red-500">body</span>: '...' <br />
+				&nbsp;<span class="text-red-500">completed</span>: '...' <br />
+				&nbsp;<span class="text-red-500">time</span>: '...' <br />
+
+				}
+			</div>
+			<p>
+				<strong>Important</strong>: resource will not be really updated on the
+				server but it will be faked as if.
+			</p>
+		</section>
+		<!-- PATCHING RESOURCES END-->
+		<!-- DELETING RESOURCES START -->
+		<section class="mt-20">
+			<h1 class="text-3xl py-5">Deleting a resource</h1>
+			<div class="shadow-md p-5 my-3">
+				<span class="text-sky-600">fetch</span>(<span style="color: gold"
+					>'https://tinyapihub.com/posts'</span
+				>, { <br />
+				&nbsp;&nbsp;<span class="text-red-500">method</span>:<span
+					style="color: gold"
+					>'DELETE'</span
+				>
+				<br />
+				}
+			</div>
+			<p>
+				<strong>Important</strong>: resource will not be really updated on the server but it will
+				be faked as if.
+			</p>
+		</section>
+		<!-- DELETING RESOURCES END-->
+
+		<!-- FILTERING RESOURCES START -->
+		<section class="mt-20">
+			<h1 class="text-3xl py-5">Filtering resources</h1>
+			<p>Basic filtering is supported through query parameters.</p>
+			<div class="shadow-md p-5 my-3">
+				<span style="color: darkblue; font-style: italic;">// This will return all the posts that belong to the first user</span> <br>
+				<span class="text-sky-600">fetch </span>
+				(<span style="color: gold">'https://tinyapihub.com/posts?id=1' </span
+				>)<br />
+				<span class="text-sky-600">.then</span> (response =>response.
+				<span class="text-sky-600">json</span>())
+				<br />
+				<span class="text-sky-600">.then</span> (json => console.
+				<span class="text-sky-600">log</span>(json))
+			</div>
+		</section>
+		<!-- FILTERING RESOURCES END -->
+		
+
+		<!-- Footer Start -->
+		<footer class="mt-10 mb-5 text-center text-red">
+			<p>Coded and maintained with ❤️ by md_abdul_malik © 2024</p>
+			<div class="flex justify-center gap-3 p-3">
+				<a href="https://github.com/malik9595" target="_blank">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="20"
+						height="20"
+						fill="rgb(8 51 68)"
+						class="bi bi-github"
+						viewBox="0 0 16 16"
+					>
+						<path
+							d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"
+						/>
+					</svg>
+				</a>
+				<a href="mailto:malik9863546801@gmail.com" target="_blank">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="20"
+						height="20"
+						fill="rgb(8 51 68)"
+						class="bi bi-envelope"
+						viewBox="0 0 16 16"
+					>
+						<path
+							d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"
+						/>
+					</svg>
+				</a>
+				<a href="https://wa.me/+919863546801" target="_blank">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="20"
+						height="20"
+						fill="rgb(8 51 68)"
+						class="bi bi-whatsapp"
+						viewBox="0 0 16 16"
+					>
+						<path
+							d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"
+						/>
+					</svg>
+				</a>
+			</div>
+		</footer>
+	</body>
+</html>
