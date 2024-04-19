@@ -12,13 +12,14 @@ This is a  simple api server using Node.js, Express,  Mongoose, and some other p
 To get started with WeatherAPI, follow these steps:
 
 ### Example Request:
-``` 
+```
+
  GET https://tinyapihub.com/users/1
  
  ```
 
 ### Example Response:
-``` bash 
+``` bash
    {
     "id": 1,
     "name": "Linthoi",
@@ -41,4 +42,4 @@ Errors are returned in the following format:
 ```
 
 ### Support and Contact
-For support queries,discussions and tips, please email malik9863546801@gmail.com welcome contributions to improve my API documentation. Please send pull requests to my GitHub repo or report issues you encounter. 
+For support queries,discussions and tips, please email malik9863546801@gmail.com. I welcome contributions to improve my API documentation. Please send pull requests to my GitHub repo or report issues you encounter. 

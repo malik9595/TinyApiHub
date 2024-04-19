@@ -9,7 +9,7 @@ const postsModels = require('./models/Posts');
 const todoListModels = require('./models/TodoList');
 
 const MongoDb_Connection_Id = process.env.MongoDb_Connection_Id;
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 
 // import routes
 const getRoute = require('./routes/get');
@@ -26,13 +26,7 @@ mongoose
 	.then(() => console.log('DB Connected'))
 	.catch((err) => console.log(`something went wrong: ${err}`));
 
-// GET OPERATIONS
-// app.get('/', (req, res) => {
-// 	res.sendFile(path.join(__dirname, 'public', 'index.html'));
-// });
-// app.get('/Guide', (req, res) => {
-// 	res.sendFile(path.join(__dirname, 'public', 'guide.html'));
-// });
+
 
 // POST OPERATIONS
 
