@@ -24,7 +24,7 @@ app.listen(PORT, () => console.log(`server started at ${PORT}`));
 mongoose
 	.connect(process.env.MongoDb_Connection_Id)
 	.then(() => console.log('DB Connected'))
-	.catch((err) => console.log(`something went wrong: ${err}`));
+	.catch((err) => console.log(`something went wrong: ${process.env.MongoDb_Connection_Id}`));
 
 
 
