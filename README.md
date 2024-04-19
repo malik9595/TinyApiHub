@@ -22,7 +22,7 @@ To get started with WeatherAPI, follow these steps:
 ``` bash
    {
     "id": 1,
-    "name": "Linthoi",
+    "name": "Linthoi Nganbi",
     "age": 22,
     "gender": "Female",
     "address": "Senapati, Manipur",
