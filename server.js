@@ -22,7 +22,7 @@ app.use(express.static(path.join(__dirname,'public')))
 app.listen(PORT, () => console.log(`server started at ${PORT}`));
 
 mongoose
-	.connect(`mongodb+srv://malik:malik@myclustername.ym6pqyq.mongodb.net/`)
+	.connect(`${MongoDb_Connection_Id}`)
 	.then(() => console.log('DB Connected'))
 	.catch((err) => console.log(`something went wrong: ${err}`));
 
