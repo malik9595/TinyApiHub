@@ -1,4 +1,4 @@
-require('dotenv').config();
+// require('dotenv').config();
 const express = require('express');
 const app = express();
 const cors = require('cors');
@@ -22,7 +22,7 @@ app.use(express.static(path.join(__dirname,'public')))
 app.listen(PORT, () => console.log(`server started at ${PORT}`));
 
 mongoose
-	.connect(`${MongoDb_Connection_Id_nothing}`)
+	.connect(`${MongoDb_Connection_Id}`)
 	.then(() => console.log('DB Connected'))
 	.catch((err) => console.log(`something went wrong: ${err}`));
 
