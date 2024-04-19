@@ -41,4 +41,4 @@ Errors are returned in the following format:
 ```
 
 ### Support and Contact
-For support queries,discussions and tips, please email malik9863546801@gmail.comwelcome contributions to improve my API documentation. Please send pull requests to my GitHub repo or report issues you encounter.
+For support queries,discussions and tips, please email malik9863546801@gmail.com welcome contributions to improve my API documentation. Please send pull requests to my GitHub repo or report issues you encounter. 

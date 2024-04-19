@@ -18,7 +18,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors());
 app.use(getRoute);
-
+app.use(express.static(path.join(__dirname,'public')))
 app.listen(PORT, () => console.log(`server started at ${PORT}`));
 
 mongoose
@@ -27,12 +27,12 @@ mongoose
 	.catch((err) => console.log(`something went wrong: ${err}`));
 
 // GET OPERATIONS
-app.get('/', (req, res) => {
-	res.sendFile(path.join(__dirname, 'public', 'index.html'));
-});
-app.get('/Guide', (req, res) => {
-	res.sendFile(path.join(__dirname, 'public', 'guide.html'));
-});
+// app.get('/', (req, res) => {
+// 	res.sendFile(path.join(__dirname, 'public', 'index.html'));
+// });
+// app.get('/Guide', (req, res) => {
+// 	res.sendFile(path.join(__dirname, 'public', 'guide.html'));
+// });
 
 // POST OPERATIONS
 
