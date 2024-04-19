@@ -1,6 +1,6 @@
 # TinyApiHub
 ## Overview
-It allows developers for testing and prototyping fake rest api data into their applications, that are free to test and beginer friendly
+It allows developers to test and prototyping fake rest api data into their applications, that are free to test and beginer friendly
 This is a  simple api server using Node.js, Express,  Mongoose, and some other packages. No need for registration to access this resources.
 
 ## Features
@@ -12,7 +12,7 @@ This is a  simple api server using Node.js, Express,  Mongoose, and some other p
 To get started with WeatherAPI, follow these steps:
 
 ### Example Request:
-``` bash
+``` 
  GET https://tinyapihub.com/users/1
  
  ```
@@ -41,4 +41,8 @@ Errors are returned in the following format:
 ```
 
 ### Support and Contact
+<<<<<<< HEAD
 For support queries,discussions and tips, please email malik9863546801@gmail.com welcome contributions to improve my API documentation. Please send pull requests to my GitHub repo or report issues you encounter. 
+=======
+For support queries,discussions and tips, please email malik9863546801@gmail.com welcome contributions to improve my API documentation. Please send pull requests to my GitHub repo or report issues you encounter.
+>>>>>>> 1238af0fa88d534e92243c22f3c997c5efe67f7a
