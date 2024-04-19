@@ -8,7 +8,7 @@ const usersModels = require('./models/Users');
 const postsModels = require('./models/Posts');
 const todoListModels = require('./models/TodoList');
 
-const MongoDb_Connection_Id = process.env.MongoDb_Connection_Id;
+// const MongoDb_Connection_Id = process.env.MongoDb_Connection_Id;
 const PORT = process.env.PORT || 5000;
 
 // import routes
@@ -22,7 +22,7 @@ app.use(express.static(path.join(__dirname,'public')))
 app.listen(PORT, () => console.log(`server started at ${PORT}`));
 
 mongoose
-	.connect(`${MongoDb_Connection_Id}`)
+	.connect(MongoDb_Connection_Id)
 	.then(() => console.log('DB Connected'))
 	.catch((err) => console.log(`something went wrong: ${err}`));
 
