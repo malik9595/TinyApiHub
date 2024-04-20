@@ -1,5 +1,4 @@
-import dotenv from 'dotenv';
-dotenv.config();
+require('dotenv').config();
 const express = require('express');
 const app = express();
 const cors = require('cors');
@@ -8,6 +7,7 @@ const path = require('path');
 const usersModels = require('./models/Users');
 const postsModels = require('./models/Posts');
 const todoListModels = require('./models/TodoList');
+const connectDB = require('./config/db')
 
 // const MongoDb_Connection_Id = process.env.MongoDb_Connection_Id;
 const PORT = process.env.PORT || 5000;
@@ -22,11 +22,8 @@ app.use(getRoute);
 app.use(express.static(path.join(__dirname,'public')))
 app.listen(PORT, () => console.log(`server started at ${PORT}`));
 
-mongoose
-	.connect(process.env.MONGO_URI)
-	.then(() => console.log('DB Connected'))
-	.catch((err) => console.log(`something went wrong: ${process.env.MongoDb_Connection_Id}`));
 
+connectDB()
 
 
 // POST OPERATIONS
