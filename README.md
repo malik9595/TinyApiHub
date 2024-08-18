@@ -12,7 +12,7 @@ This is a  simple api server using Node.js, Express,  Mongoose, and some other p
 To get started with WeatherAPI, follow these steps:
 
 > [!NOTE]
-> Useful information that users should know, even when skimming content.
+> Replace https://tinyapihub.com with actual home domain.
 
 ### Example Request:
 ```
